@@ -1,0 +1,13 @@
+<!--
+Here I want to use struct directives to create a template to show our art items
+-->
+
+<ul>
+  <li *ngFor="let art of artPieces">
+    <a (click)="onSelect(art.id)">
+      {{art.name}} by {{art.artist}} Produced in: {{ art.yearCreated }}
+    </a>
+  </li>
+</ul>
+
+<app-gallery-list-detail [artPiece]="selectedArtPiece"></app-gallery-list-detail>
